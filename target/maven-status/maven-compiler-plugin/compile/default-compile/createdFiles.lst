@@ -1,8 +1,0 @@
-hello/PersonRepository.class
-hello/SpringSecurityWebAppConfig.class
-hello/BadRequestException.class
-hello/HelloController.class
-hello/LocalDateAttributeConverter.class
-hello/Application.class
-hello/Person.class
-hello/RootController.class

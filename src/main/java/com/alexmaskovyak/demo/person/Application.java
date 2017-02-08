@@ -1,4 +1,4 @@
-package hello;
+package com.alexmaskovyak.demo.person;
 
 import java.util.Arrays;
 

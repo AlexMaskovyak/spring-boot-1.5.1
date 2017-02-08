@@ -1,5 +1,6 @@
-package hello;
+package com.alexmaskovyak.demo.person.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -11,6 +12,7 @@ public class RootController {
     }
     
     @RequestMapping("/restricted")
+    @PreAuthorize("hasRole(@roles.ADMIN)")
     String restricted() {
         return "restricted";
     }

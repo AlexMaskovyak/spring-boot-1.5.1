@@ -1,4 +1,4 @@
-package hello;
+package com.alexmaskovyak.demo.person.model;
 
 import java.time.LocalDate;
 import java.util.UUID;

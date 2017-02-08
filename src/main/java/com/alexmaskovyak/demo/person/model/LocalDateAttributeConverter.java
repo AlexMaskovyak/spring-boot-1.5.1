@@ -1,4 +1,4 @@
-package hello;
+package com.alexmaskovyak.demo.person.model;
 
 import java.sql.Date;
 import java.time.LocalDate;
