@@ -9,4 +9,9 @@ public class RootController {
     String home() {
         return "home";
     }
+    
+    @RequestMapping("/restricted")
+    String restricted() {
+        return "restricted";
+    }
 }
