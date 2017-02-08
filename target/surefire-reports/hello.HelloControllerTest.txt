@@ -1,4 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: hello.HelloControllerTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.646 sec - in hello.HelloControllerTest
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 4.808 sec <<< FAILURE! - in hello.HelloControllerTest
+createPerson(hello.HelloControllerTest)  Time elapsed: 0.039 sec  <<< FAILURE!
+java.lang.AssertionError: Status expected:<201> but was:<401>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:54)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:81)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers$10.match(StatusResultMatchers.java:664)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
+	at hello.HelloControllerTest.createPerson(HelloControllerTest.java:52)
+
+getHello(hello.HelloControllerTest)  Time elapsed: 0.01 sec  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<401>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:54)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:81)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers$10.match(StatusResultMatchers.java:664)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
+	at hello.HelloControllerTest.getHello(HelloControllerTest.java:39)
+

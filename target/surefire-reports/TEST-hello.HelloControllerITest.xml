@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="hello.HelloControllerITest" time="0.226" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="hello.HelloControllerITest" time="0.282" tests="1" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib"/>
@@ -61,5 +61,671 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="getHello" classname="hello.HelloControllerITest" time="0.226"/>
+  <testcase name="getHello" classname="hello.HelloControllerITest" time="0.282">
+    <failure message="&#10;Expected: &quot;Greetings from Spring Boot!&quot;&#10;     but: was &quot;{\&quot;status\&quot;:\&quot;error.accessDenied\&quot;,\&quot;message\&quot;:\&quot;Full authentication is required to access this resource\&quot;,\&quot;fieldErrors\&quot;:null}&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expected: "Greetings from Spring Boot!"
+     but: was "{\"status\":\"error.accessDenied\",\"message\":\"Full authentication is required to access this resource\",\"fieldErrors\":null}"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at hello.HelloControllerITest.getHello(HelloControllerITest.java:38)
+</failure>
+    <system-out><![CDATA[2017-02-07 21:02:58.009  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [hello.HelloControllerITest], using SpringBootContextLoader
+2017-02-07 21:02:58.016  INFO   --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [hello.HelloControllerITest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-02-07 21:02:58.018  INFO   --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hello.HelloControllerITest]: HelloControllerITest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-02-07 21:02:58.137  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hello.Application for test class hello.HelloControllerITest
+2017-02-07 21:02:58.143  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-07 21:02:58.166  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7b9a4292, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4a94ee4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4cc451f2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6379eb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@294425a7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@67d48005, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@9f116cc, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@12468a38, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1aa7ecca, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@59309333, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5876a9af, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7ec7ffd3]
+2017-02-07 21:02:58.168  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [hello.HelloControllerTest], using SpringBootContextLoader
+2017-02-07 21:02:58.169  INFO   --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [hello.HelloControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-02-07 21:02:58.170  INFO   --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hello.HelloControllerTest]: HelloControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-02-07 21:02:58.188  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hello.Application for test class hello.HelloControllerTest
+2017-02-07 21:02:58.194  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-07 21:02:58.198  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6a78afa0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2f4948e4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1f2586d6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@10683d9d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3fc2959f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5aa9e4eb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6989da5e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@385c9627, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@139982de, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@682b2fa, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@217ed35e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7dcf94f8]
+2017-02-07 21:02:58.204  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [hello.HelloControllerITest], using SpringBootContextLoader
+2017-02-07 21:02:58.205  INFO   --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [hello.HelloControllerITest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-02-07 21:02:58.206  INFO   --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [hello.HelloControllerITest]: HelloControllerITest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-02-07 21:02:58.213  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration hello.Application for test class hello.HelloControllerITest
+2017-02-07 21:02:58.219  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-02-07 21:02:58.223  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@385e9564, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5b94b04d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@8c3b9d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4c39bec8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@f79e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7ee8290b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1f59a598, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1e178745, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@192c3f1e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@26b3fd41, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7494f96a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@561b6512]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.1.RELEASE)
+
+2017-02-07 21:02:58.507  INFO 35401 --- [           main] hello.HelloControllerITest               : Starting HelloControllerITest on Alexanders-MBP with PID 35401 (started by alexmaskovyak in /Users/alexmaskovyak/workspace/personal/spring-boot-1.5.1)
+2017-02-07 21:02:58.507  INFO 35401 --- [           main] hello.HelloControllerITest               : No active profile set, falling back to default profiles: default
+2017-02-07 21:02:58.730  INFO 35401 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5038d0b5: startup date [Tue Feb 07 21:02:58 MST 2017]; root of context hierarchy
+2017-02-07 21:02:59.733  INFO 35401 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'httpRequestHandlerAdapter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration; factoryMethodName=httpRequestHandlerAdapter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration; factoryMethodName=httpRequestHandlerAdapter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/data/rest/webmvc/config/RepositoryRestMvcConfiguration.class]]
+2017-02-07 21:02:59.796  INFO 35401 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'managementServletContext' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration; factoryMethodName=managementServletContext; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/EndpointWebMvcHypermediaManagementContextConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration; factoryMethodName=managementServletContext; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/EndpointWebMvcAutoConfiguration.class]]
+2017-02-07 21:02:59.923  WARN 35401 --- [           main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'stormpathMessageSourceDefinitionPostProcessor' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2017-02-07 21:03:00.404  INFO 35401 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-07 21:03:00.480  INFO 35401 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'validator' of type [class org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-07 21:03:00.555  INFO 35401 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9b4e8664] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-07 21:03:00.614  INFO 35401 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [class org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$33fc4e9e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-07 21:03:00.633  INFO 35401 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [class org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-07 21:03:00.638  INFO 35401 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1fbf088b' of type [class org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-07 21:03:00.665  INFO 35401 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'stormpathWildcardPermissionEvaluator' of type [class com.stormpath.spring.security.authz.permission.evaluator.WildcardPermissionEvaluator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-07 21:03:00.666  INFO 35401 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'stormpathMethodSecurityExpressionHandler' of type [class org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-07 21:03:00.680  INFO 35401 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.stormpath.spring.boot.autoconfigure.StormpathMethodSecurityAutoConfiguration' of type [class com.stormpath.spring.boot.autoconfigure.StormpathMethodSecurityAutoConfiguration$$EnhancerBySpringCGLIB$$437fe260] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-07 21:03:00.694  INFO 35401 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [class org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-02-07 21:03:01.086  INFO 35401 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 0 (http)
+2017-02-07 21:03:01.102  INFO 35401 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-02-07 21:03:01.103  INFO 35401 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-02-07 21:03:01.210  INFO 35401 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-02-07 21:03:01.211  INFO 35401 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2485 ms
+2017-02-07 21:03:02.395  INFO 35401 --- [ost-startStop-1] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-02-07 21:03:02.413  INFO 35401 --- [ost-startStop-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-02-07 21:03:02.503  INFO 35401 --- [ost-startStop-1] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2017-02-07 21:03:02.504  INFO 35401 --- [ost-startStop-1] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-02-07 21:03:02.506  INFO 35401 --- [ost-startStop-1] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-02-07 21:03:02.557  INFO 35401 --- [ost-startStop-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-02-07 21:03:02.697  INFO 35401 --- [ost-startStop-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-02-07 21:03:03.197  INFO 35401 --- [ost-startStop-1] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2017-02-07 21:03:03.206  INFO 35401 --- [ost-startStop-1] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2017-02-07 21:03:03.237  INFO 35401 --- [ost-startStop-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-02-07 21:03:03.472  INFO 35401 --- [ost-startStop-1] o.s.b.f.config.PropertiesFactoryBean     : Loading properties file from class path resource [rest-default-messages.properties]
+2017-02-07 21:03:07.275  INFO 35401 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-02-07 21:03:07.276  INFO 35401 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-02-07 21:03:07.276  INFO 35401 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-02-07 21:03:07.276  INFO 35401 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-02-07 21:03:07.276  INFO 35401 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-02-07 21:03:07.277  INFO 35401 --- [ost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-02-07 21:03:07.278  INFO 35401 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'stormpathFilter' to urls: [/*]
+2017-02-07 21:03:07.278  INFO 35401 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-02-07 21:03:07.278  INFO 35401 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'stormpathSecurityContextPersistenceFilter' to: [/*]
+2017-02-07 21:03:07.278  INFO 35401 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'socialCallbackSpringSecurityProcessingFilter' to: [/*]
+2017-02-07 21:03:07.278  INFO 35401 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'contentNegotiationSpringSecurityAuthenticationFilter' to: [/*]
+2017-02-07 21:03:07.278  INFO 35401 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'springSecurityResolvedAccountFilter' to: [/*]
+2017-02-07 21:03:07.279  INFO 35401 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'stormpathWrapperFilter' to: [/*]
+2017-02-07 21:03:07.279  INFO 35401 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-02-07 21:03:07.279  INFO 35401 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-02-07 21:03:07.586  INFO 35401 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5038d0b5: startup date [Tue Feb 07 21:02:58 MST 2017]; root of context hierarchy
+2017-02-07 21:03:07.596  INFO 35401 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Detected ResponseBodyAdvice bean in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$ActuatorEndpointLinksAdvice
+2017-02-07 21:03:07.678  INFO 35401 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String hello.HelloController.index()
+2017-02-07 21:03:07.679  INFO 35401 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto java.lang.String hello.RootController.home()
+2017-02-07 21:03:07.682  INFO 35401 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-02-07 21:03:07.682  INFO 35401 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-02-07 21:03:07.739  INFO 35401 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-07 21:03:07.740  INFO 35401 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-07 21:03:07.767  INFO 35401 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in repositoryRestExceptionHandler
+2017-02-07 21:03:07.768  INFO 35401 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Detected ResponseBodyAdvice implementation in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$ActuatorEndpointLinksAdvice
+2017-02-07 21:03:07.812  INFO 35401 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-07 21:03:07.814  INFO 35401 --- [           main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2017-02-07 21:03:08.000  INFO 35401 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2017-02-07 21:03:08.143  INFO 35401 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5db3d57c, com.stormpath.spring.filter.StormpathWrapperFilter@3e53cbd0, org.springframework.security.web.context.SecurityContextPersistenceFilter@14b275bd, org.springframework.security.web.header.HeaderWriterFilter@f245bdd, org.springframework.web.filter.CorsFilter@53a50b0a, org.springframework.security.web.csrf.CsrfFilter@3a0aaaf0, com.stormpath.sdk.servlet.filter.account.AccountResolverFilter@310387d6, org.springframework.security.web.authentication.logout.LogoutFilter@437c4b25, com.stormpath.spring.filter.StormpathSecurityContextPersistenceFilter@12837dc8, com.stormpath.spring.security.provider.SocialCallbackSpringSecurityProcessingFilter@699cdeee, com.stormpath.spring.filter.ContentNegotiationSpringSecurityAuthenticationFilter@6b130d2f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b03cbad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@626b639e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74ba6ff5, org.springframework.security.web.session.SessionManagementFilter@280fafd, org.springframework.security.web.access.ExceptionTranslationFilter@77524ca7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b30a50d]
+2017-02-07 21:03:08.160  INFO 35401 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@251d7fdd, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78e68401, com.stormpath.spring.filter.StormpathWrapperFilter@3e53cbd0, org.springframework.security.web.context.SecurityContextPersistenceFilter@26c8b296, org.springframework.security.web.header.HeaderWriterFilter@8c0a23f, org.springframework.web.filter.CorsFilter@391515c7, org.springframework.security.web.csrf.CsrfFilter@411fa0ce, com.stormpath.sdk.servlet.filter.account.AccountResolverFilter@310387d6, org.springframework.security.web.authentication.logout.LogoutFilter@45801322, com.stormpath.spring.filter.StormpathSecurityContextPersistenceFilter@12837dc8, com.stormpath.spring.security.provider.SocialCallbackSpringSecurityProcessingFilter@699cdeee, com.stormpath.spring.filter.ContentNegotiationSpringSecurityAuthenticationFilter@6b130d2f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@26be9a6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d289d3f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@10f405ff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b0dbfb, org.springframework.security.web.session.SessionManagementFilter@44d7e24, org.springframework.security.web.access.ExceptionTranslationFilter@40df6090, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@31aab981]
+2017-02-07 21:03:08.165  INFO 35401 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a48da4f, com.stormpath.spring.filter.StormpathWrapperFilter@3e53cbd0, org.springframework.security.web.context.SecurityContextPersistenceFilter@20440c6c, org.springframework.security.web.header.HeaderWriterFilter@28fc1132, org.springframework.web.filter.CorsFilter@a0c5be, org.springframework.security.web.csrf.CsrfFilter@3e856100, com.stormpath.sdk.servlet.filter.account.AccountResolverFilter@310387d6, org.springframework.security.web.authentication.logout.LogoutFilter@4b9c411, com.stormpath.spring.filter.StormpathSecurityContextPersistenceFilter@12837dc8, com.stormpath.spring.security.provider.SocialCallbackSpringSecurityProcessingFilter@699cdeee, com.stormpath.spring.filter.ContentNegotiationSpringSecurityAuthenticationFilter@6b130d2f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e3f86d5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@560271a1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6424e613, org.springframework.security.web.session.SessionManagementFilter@355ce6a6, org.springframework.security.web.access.ExceptionTranslationFilter@6e9a0bea, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@68631b1d]
+2017-02-07 21:03:08.170  INFO 35401 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b02a984, com.stormpath.spring.filter.StormpathWrapperFilter@3e53cbd0, org.springframework.security.web.context.SecurityContextPersistenceFilter@2478b629, org.springframework.security.web.header.HeaderWriterFilter@7e49ded, org.springframework.web.filter.CorsFilter@57186526, org.springframework.security.web.csrf.CsrfFilter@261f359f, com.stormpath.sdk.servlet.filter.account.AccountResolverFilter@310387d6, org.springframework.security.web.authentication.logout.LogoutFilter@570a62a5, com.stormpath.spring.filter.StormpathSecurityContextPersistenceFilter@12837dc8, com.stormpath.spring.security.provider.SocialCallbackSpringSecurityProcessingFilter@699cdeee, com.stormpath.spring.filter.ContentNegotiationSpringSecurityAuthenticationFilter@6b130d2f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@36224f93, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39023dbf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a2ac487, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@391d1e33, org.springframework.security.web.session.SessionManagementFilter@2c6c302f, org.springframework.security.web.access.ExceptionTranslationFilter@1e6060f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2db86a7c]
+2017-02-07 21:03:08.201  INFO 35401 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/assets/css/*stormpath.css] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-07 21:03:08.201  INFO 35401 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/assets/js/*stormpath.js] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-02-07 21:03:08.493  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerAdapter   : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5038d0b5: startup date [Tue Feb 07 21:02:58 MST 2017]; root of context hierarchy
+2017-02-07 21:03:08.496  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerAdapter   : Detected ResponseBodyAdvice bean in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$ActuatorEndpointLinksAdvice
+2017-02-07 21:03:08.526  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}],methods=[OPTIONS],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.data.rest.webmvc.RepositoryEntityController.optionsForCollectionResource(org.springframework.data.rest.webmvc.RootResourceInformation)
+2017-02-07 21:03:08.526  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}],methods=[HEAD],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.data.rest.webmvc.RepositoryEntityController.headCollectionResource(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.data.rest.webmvc.support.DefaultedPageable) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2017-02-07 21:03:08.527  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}],methods=[GET],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.hateoas.Resources<?> org.springframework.data.rest.webmvc.RepositoryEntityController.getCollectionResource(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.data.rest.webmvc.support.DefaultedPageable,org.springframework.data.domain.Sort,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler) throws org.springframework.data.rest.webmvc.ResourceNotFoundException,org.springframework.web.HttpRequestMethodNotSupportedException
+2017-02-07 21:03:08.527  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}],methods=[GET],produces=[application/x-spring-data-compact+json || text/uri-list]}" onto public org.springframework.hateoas.Resources<?> org.springframework.data.rest.webmvc.RepositoryEntityController.getCollectionResourceCompact(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.data.rest.webmvc.support.DefaultedPageable,org.springframework.data.domain.Sort,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler) throws org.springframework.data.rest.webmvc.ResourceNotFoundException,org.springframework.web.HttpRequestMethodNotSupportedException
+2017-02-07 21:03:08.528  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}],methods=[POST],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryEntityController.postCollectionResource(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.data.rest.webmvc.PersistentEntityResource,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler,java.lang.String) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2017-02-07 21:03:08.528  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}],methods=[OPTIONS],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.data.rest.webmvc.RepositoryEntityController.optionsForItemResource(org.springframework.data.rest.webmvc.RootResourceInformation)
+2017-02-07 21:03:08.528  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}],methods=[HEAD],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.data.rest.webmvc.RepositoryEntityController.headForItemResource(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2017-02-07 21:03:08.529  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}],methods=[GET],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<org.springframework.hateoas.Resource<?>> org.springframework.data.rest.webmvc.RepositoryEntityController.getItemResource(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler,org.springframework.http.HttpHeaders) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2017-02-07 21:03:08.529  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}],methods=[PUT],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<? extends org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryEntityController.putItemResource(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.data.rest.webmvc.PersistentEntityResource,java.io.Serializable,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler,org.springframework.data.rest.webmvc.support.ETag,java.lang.String) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2017-02-07 21:03:08.530  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}],methods=[PATCH],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryEntityController.patchItemResource(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.data.rest.webmvc.PersistentEntityResource,java.io.Serializable,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler,org.springframework.data.rest.webmvc.support.ETag,java.lang.String) throws org.springframework.web.HttpRequestMethodNotSupportedException,org.springframework.data.rest.webmvc.ResourceNotFoundException
+2017-02-07 21:03:08.530  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}],methods=[DELETE],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.data.rest.webmvc.RepositoryEntityController.deleteItemResource(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable,org.springframework.data.rest.webmvc.support.ETag) throws org.springframework.data.rest.webmvc.ResourceNotFoundException,org.springframework.web.HttpRequestMethodNotSupportedException
+2017-02-07 21:03:08.535  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}/{property}],methods=[GET],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryPropertyReferenceController.followPropertyReference(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable,java.lang.String,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler) throws java.lang.Exception
+2017-02-07 21:03:08.535  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}/{property}/{propertyId}],methods=[GET],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryPropertyReferenceController.followPropertyReference(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable,java.lang.String,java.lang.String,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler) throws java.lang.Exception
+2017-02-07 21:03:08.536  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}/{property}],methods=[DELETE],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<? extends org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryPropertyReferenceController.deletePropertyReference(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable,java.lang.String) throws java.lang.Exception
+2017-02-07 21:03:08.536  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}/{property}],methods=[GET],produces=[application/x-spring-data-compact+json || text/uri-list]}" onto public org.springframework.http.ResponseEntity<org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryPropertyReferenceController.followPropertyReferenceCompact(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable,java.lang.String,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler) throws java.lang.Exception
+2017-02-07 21:03:08.537  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}/{property}],methods=[PATCH || PUT || POST],consumes=[application/json || application/x-spring-data-compact+json || text/uri-list],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<? extends org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryPropertyReferenceController.createPropertyReference(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.http.HttpMethod,org.springframework.hateoas.Resources<java.lang.Object>,java.io.Serializable,java.lang.String) throws java.lang.Exception
+2017-02-07 21:03:08.537  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}/{property}/{propertyId}],methods=[DELETE],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryPropertyReferenceController.deletePropertyReferenceId(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable,java.lang.String,java.lang.String) throws java.lang.Exception
+2017-02-07 21:03:08.538  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/ || ],methods=[OPTIONS],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.HttpEntity<?> org.springframework.data.rest.webmvc.RepositoryController.optionsForRepositories()
+2017-02-07 21:03:08.538  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/ || ],methods=[HEAD],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.data.rest.webmvc.RepositoryController.headForRepositories()
+2017-02-07 21:03:08.539  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/ || ],methods=[GET],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.HttpEntity<org.springframework.data.rest.webmvc.RepositoryLinksResource> org.springframework.data.rest.webmvc.RepositoryController.listRepositories()
+2017-02-07 21:03:08.540  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/search],methods=[OPTIONS],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.HttpEntity<?> org.springframework.data.rest.webmvc.RepositorySearchController.optionsForSearches(org.springframework.data.rest.webmvc.RootResourceInformation)
+2017-02-07 21:03:08.541  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/search],methods=[HEAD],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.HttpEntity<?> org.springframework.data.rest.webmvc.RepositorySearchController.headForSearches(org.springframework.data.rest.webmvc.RootResourceInformation)
+2017-02-07 21:03:08.541  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/search],methods=[GET],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.data.rest.webmvc.RepositorySearchesResource org.springframework.data.rest.webmvc.RepositorySearchController.listSearches(org.springframework.data.rest.webmvc.RootResourceInformation)
+2017-02-07 21:03:08.541  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/search/{search}],methods=[GET],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.data.rest.webmvc.RepositorySearchController.executeSearch(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.util.MultiValueMap<java.lang.String, java.lang.Object>,java.lang.String,org.springframework.data.rest.webmvc.support.DefaultedPageable,org.springframework.data.domain.Sort,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler,org.springframework.http.HttpHeaders)
+2017-02-07 21:03:08.542  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/search/{search}],methods=[GET],produces=[application/x-spring-data-compact+json]}" onto public org.springframework.hateoas.ResourceSupport org.springframework.data.rest.webmvc.RepositorySearchController.executeSearchCompact(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.http.HttpHeaders,org.springframework.util.MultiValueMap<java.lang.String, java.lang.Object>,java.lang.String,java.lang.String,org.springframework.data.rest.webmvc.support.DefaultedPageable,org.springframework.data.domain.Sort,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler)
+2017-02-07 21:03:08.542  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/search/{search}],methods=[OPTIONS],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> org.springframework.data.rest.webmvc.RepositorySearchController.optionsForSearch(org.springframework.data.rest.webmvc.RootResourceInformation,java.lang.String)
+2017-02-07 21:03:08.542  INFO 35401 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/search/{search}],methods=[HEAD],produces=[application/hal+json || application/json || application/*+json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> org.springframework.data.rest.webmvc.RepositorySearchController.headForSearch(org.springframework.data.rest.webmvc.RootResourceInformation,java.lang.String)
+2017-02-07 21:03:08.546  INFO 35401 --- [           main] o.s.d.r.w.BasePathAwareHandlerMapping    : Mapped "{[/profile],methods=[OPTIONS]}" onto public org.springframework.http.HttpEntity<?> org.springframework.data.rest.webmvc.ProfileController.profileOptions()
+2017-02-07 21:03:08.547  INFO 35401 --- [           main] o.s.d.r.w.BasePathAwareHandlerMapping    : Mapped "{[/profile],methods=[GET]}" onto org.springframework.http.HttpEntity<org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.ProfileController.listAllFormsOfMetadata()
+2017-02-07 21:03:08.547  INFO 35401 --- [           main] o.s.d.r.w.BasePathAwareHandlerMapping    : Mapped "{[/profile/{repository}],methods=[GET],produces=[application/schema+json]}" onto public org.springframework.http.HttpEntity<org.springframework.data.rest.webmvc.json.JsonSchema> org.springframework.data.rest.webmvc.RepositorySchemaController.schema(org.springframework.data.rest.webmvc.RootResourceInformation)
+2017-02-07 21:03:08.547  INFO 35401 --- [           main] o.s.d.r.w.BasePathAwareHandlerMapping    : Mapped "{[/profile/{repository}],methods=[GET],produces=[application/alps+json || */*]}" onto org.springframework.http.HttpEntity<org.springframework.data.rest.webmvc.RootResourceInformation> org.springframework.data.rest.webmvc.alps.AlpsController.descriptor(org.springframework.data.rest.webmvc.RootResourceInformation)
+2017-02-07 21:03:08.548  INFO 35401 --- [           main] o.s.d.r.w.BasePathAwareHandlerMapping    : Mapped "{[/profile/{repository}],methods=[OPTIONS],produces=[application/alps+json]}" onto org.springframework.http.HttpEntity<?> org.springframework.data.rest.webmvc.alps.AlpsController.alpsOptions()
+2017-02-07 21:03:08.564  INFO 35401 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in repositoryRestExceptionHandler
+2017-02-07 21:03:08.564  INFO 35401 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Detected ResponseBodyAdvice implementation in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$ActuatorEndpointLinksAdvice
+2017-02-07 21:03:08.648  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-02-07 21:03:08.649  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-02-07 21:03:08.650  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-02-07 21:03:08.650  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-02-07 21:03:08.651  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-02-07 21:03:08.652  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest)
+2017-02-07 21:03:08.652  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-02-07 21:03:08.655  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-02-07 21:03:08.656  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/actuator || /actuator.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.hateoas.ResourceSupport org.springframework.boot.actuate.endpoint.mvc.HalJsonMvcEndpoint.links()
+2017-02-07 21:03:08.657  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-02-07 21:03:08.658  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-02-07 21:03:08.658  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2017-02-07 21:03:08.660  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2017-02-07 21:03:08.660  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2017-02-07 21:03:08.660  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-02-07 21:03:08.661  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-02-07 21:03:08.661  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-02-07 21:03:08.662  INFO 35401 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-02-07 21:03:09.110  INFO 35401 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 51026 (http)
+Let's inspect the beans provided by Spring Boot:
+_halObjectMapper
+_linkDiscovererRegistry
+_relProvider
+accessTokenCookieProperties
+actuatorMetricReader
+alpsController
+alpsConverter
+alpsJsonHttpMessageConverter
+annotatedEventHandlerInvoker
+annotationRelProvider
+application
+applicationContextIdFilter
+associationLinks
+auditEventMvcEndpoint
+auditEventRepository
+auditListener
+auditableBeanWrapperFactory
+authenticationAuditListener
+authenticationEventPublisher
+authenticationManager
+authenticationManagerBuilder
+authenticationManagerConfigurationListener
+authorizationAuditListener
+autoConfigurationReportEndpoint
+autowiredWebSecurityConfigurersIgnoreParents
+backendIdConverterRegistry
+backendIdHandlerMethodArgumentResolver
+baseUri
+basicErrorController
+beanNameHandlerMapping
+beanNameViewResolver
+beansEndpoint
+bootGlobalAuthenticationConfigurationAdapter
+characterEncodingFilter
+com.stormpath.spring.boot.autoconfigure.StormpathAutoConfiguration
+com.stormpath.spring.boot.autoconfigure.StormpathMethodSecurityAutoConfiguration
+com.stormpath.spring.boot.autoconfigure.StormpathSpringSecurityAutoConfiguration
+com.stormpath.spring.boot.autoconfigure.StormpathSpringSecurityAutoConfiguration$AuthenticationSecurity
+com.stormpath.spring.boot.autoconfigure.StormpathWebMvcAutoConfiguration
+com.stormpath.spring.boot.autoconfigure.StormpathWebSecurityAutoConfiguration
+com.stormpath.spring.boot.autoconfigure.StormpathWebSecurityAutoConfiguration$SpringSecurityWebAppConfig
+com.stormpath.spring.config.StormpathMessageSourceConfiguration
+commandLineRunner
+config
+configurationPropertiesReportEndpoint
+contentNegotiationSpringSecurityAuthenticationFilter
+controllerEntityLinks
+conventionErrorViewResolver
+corsConfigurationSource
+counterBuffers
+counterService
+dataSource
+dataSourceInitializedPublisher
+dataSourceInitializer
+dataSourceInitializerPostProcessor
+dataSourcePublicMetrics
+dbHealthIndicator
+defaultConversionService
+defaultIgnoredRequestsCustomizer
+defaultMessageConverters
+defaultRelProvider
+defaultServletHandlerMapping
+defaultTemplateResolver
+defaultViewResolver
+delegatingApplicationListener
+delegatingEntityLinks
+diskSpaceHealthIndicator
+diskSpaceHealthIndicatorProperties
+dispatcherServlet
+dispatcherServletRegistration
+domainObjectMerger
+dumpEndpoint
+duplicateServerPropertiesDetector
+eTagArgumentResolver
+emBeanDefinitionRegistrarPostProcessor
+embeddedServletContainerCustomizerBeanPostProcessor
+enableGlobalAuthenticationAutowiredConfigurer
+endpointHandlerMapping
+endpoints-org.springframework.boot.actuate.endpoint.EndpointProperties
+endpoints.cors-org.springframework.boot.actuate.autoconfigure.EndpointCorsProperties
+endpoints.health-org.springframework.boot.actuate.autoconfigure.HealthMvcEndpointProperties
+endpoints.metrics.filter-org.springframework.boot.actuate.autoconfigure.MetricFilterProperties
+entityLinks
+entityLinksPluginRegistry
+entityManagerFactory
+entityManagerFactoryBuilder
+enumTranslator
+envInfoContributor
+environmentEndpoint
+environmentMvcEndpoint
+error
+errorAttributes
+errorPageCustomizer
+errorPageRegistrarBeanPostProcessor
+exceptionHandlerExceptionResolver
+excerptProjector
+faviconHandlerMapping
+faviconRequestHandler
+gaugeBuffers
+gaugeService
+halJacksonHttpMessageConverter
+halJsonMvcEndpoint
+halMessageConverterSupportedMediaTypeCustomizer
+halObjectMapper
+handlerExceptionResolver
+healthAggregator
+healthEndpoint
+healthMvcEndpoint
+heapdumpMvcEndpoint
+helloController
+hiddenHttpMethodFilter
+httpHeadersPreparer
+httpPutFormContentFilter
+httpRequestHandlerAdapter
+ignoredPathsWebSecurityConfigurerAdapter
+infoEndpoint
+initializeAuthenticationProviderBeanManagerConfigurer
+initializeUserDetailsBeanManagerConfigurer
+jacksonGeoModule
+jacksonHttpMessageConverter
+jacksonObjectMapper
+jacksonObjectMapperBuilder
+jdbcTemplate
+jpaContext
+jpaHelper
+jpaMappingContext
+jpaVendorAdapter
+jsonComponentModule
+jsonSchemaConverter
+layoutDialect
+linkCollector
+linkRelationMessageSource
+localeCharsetMappingsCustomizer
+loggersEndpoint
+loggersMvcEndpoint
+management.health.status-org.springframework.boot.actuate.autoconfigure.HealthIndicatorProperties
+management.info-org.springframework.boot.actuate.autoconfigure.InfoContributorProperties
+management.trace-org.springframework.boot.actuate.trace.TraceProperties
+managementContextResolver
+managementIgnoredRequestCustomizer
+managementServerProperties
+managementServletContext
+mappingJackson2HttpMessageConverter
+messageConverters
+messageSource
+metaDataSourceAdvisor
+metadataConfiguration
+methodSecurityInterceptor
+methodSecurityMetadataSource
+methodValidationPostProcessor
+metricReaderPublicMetrics
+metricWritersMetricExporter
+metricsEndpoint
+metricsFilter
+metricsMvcEndpoint
+multipartConfigElement
+multipartResolver
+mvcContentNegotiationManager
+mvcConversionService
+mvcEndpoints
+mvcPathMatcher
+mvcResourceUrlProvider
+mvcUriComponentsContributor
+mvcUrlPathHelper
+mvcValidator
+mvcViewResolver
+namedParameterJdbcTemplate
+objectMapper
+objectPostProcessor
+openEntityManagerInViewInterceptor
+org.springframework.aop.config.internalAutoProxyCreator
+org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration$AuditEventRepositoryConfiguration
+org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration$RequestMappingEndpointConfiguration
+org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ApplicationContextFilterConfiguration
+org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$EndpointWebMvcConfiguration
+org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration
+org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$ActuatorEndpointLinksAdvice
+org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$DocsMvcEndpointConfiguration
+org.springframework.boot.actuate.autoconfigure.EndpointWebMvcManagementContextConfiguration
+org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$DataSourcesHealthIndicatorConfiguration
+org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$DiskSpaceHealthIndicatorConfiguration
+org.springframework.boot.actuate.autoconfigure.InfoContributorAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.ManagementServerPropertiesAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$ManagementSecurityPropertiesConfiguration
+org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$ManagementWebSecurityConfigurerAdapter
+org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration$MetricExportPropertiesConfiguration
+org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration$StatsdConfiguration
+org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration$FastMetricServicesConfiguration
+org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration$DataSourceMetricsConfiguration
+org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration$TomcatMetricsConfiguration
+org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration
+org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration
+org.springframework.boot.autoconfigure.AutoConfigurationPackages
+org.springframework.boot.autoconfigure.aop.AopAutoConfiguration
+org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$JdkDynamicAutoProxyConfiguration
+org.springframework.boot.autoconfigure.condition.BeanTypeRegistry
+org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration
+org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration
+org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration
+org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration
+org.springframework.boot.autoconfigure.hateoas.HypermediaHttpMessageConverterConfiguration
+org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration
+org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration
+org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat
+org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration
+org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$TransactionManagementConfiguration
+org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration
+org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration
+org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$TomcatDataSourcePoolMetadataProviderConfiguration
+org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration
+org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration
+org.springframework.boot.autoconfigure.security.AuthenticationManagerConfiguration
+org.springframework.boot.autoconfigure.security.BootGlobalAuthenticationConfiguration
+org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration
+org.springframework.boot.autoconfigure.security.SecurityFilterAutoConfiguration
+org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration
+org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationWebSecurityConfigurerAdapter
+org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration
+org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$Thymeleaf2Configuration
+org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$Thymeleaf2Configuration$DefaultTemplateResolverConfiguration
+org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$Thymeleaf2Configuration$Thymeleaf2ViewResolverConfiguration
+org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafDefaultConfiguration
+org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafResourceHandlingConfig
+org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafWebLayoutConfiguration
+org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
+org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$TransactionTemplateConfiguration
+org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration
+org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration
+org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration
+org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletConfiguration
+org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration
+org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration
+org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat
+org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration
+org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration
+org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration
+org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration
+org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration
+org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration
+org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration
+org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration
+org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration
+org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration
+org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration
+org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration$RestTemplateConfiguration
+org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration
+org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration
+org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter
+org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$FaviconConfiguration
+org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration
+org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration$TomcatWebSocketConfiguration
+org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor
+org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.store
+org.springframework.boot.test.mock.mockito.MockitoPostProcessor
+org.springframework.boot.test.mock.mockito.MockitoPostProcessor$SpyPostProcessor
+org.springframework.boot.test.web.client.TestRestTemplate
+org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+org.springframework.context.annotation.internalCommonAnnotationProcessor
+org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+org.springframework.context.annotation.internalPersistenceAnnotationProcessor
+org.springframework.context.annotation.internalRequiredAnnotationProcessor
+org.springframework.context.annotation.internalScheduledAnnotationProcessor
+org.springframework.context.event.internalEventListenerFactory
+org.springframework.context.event.internalEventListenerProcessor
+org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration
+org.springframework.data.web.config.SpringDataJacksonConfiguration
+org.springframework.hateoas.LinkDiscoverers#0
+org.springframework.hateoas.config.HateoasConfiguration
+org.springframework.hateoas.config.HypermediaSupportBeanDefinitionRegistrar$DefaultObjectMapperCustomizer#0
+org.springframework.hateoas.config.HypermediaSupportBeanDefinitionRegistrar$Jackson2ModuleRegisteringBeanPostProcessor#0
+org.springframework.hateoas.hal.HalLinkDiscoverer#0
+org.springframework.orm.jpa.SharedEntityManagerCreator#0
+org.springframework.scheduling.annotation.SchedulingConfiguration
+org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration
+org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration
+org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration
+org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration
+org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration
+org.springframework.transaction.config.internalTransactionAdvisor
+org.springframework.transaction.config.internalTransactionalEventListenerFactory
+pageableResolver
+pagedResourcesAssembler
+pagedResourcesAssemblerArgumentResolver
+persistenceExceptionTranslationPostProcessor
+persistentEntities
+persistentEntityArgumentResolver
+personRepository
+platformTransactionManagerCustomizers
+preInvocationAuthorizationAdvice
+preserveErrorControllerTargetClassPostProcessor
+privilegeEvaluator
+profileController
+profileResourceProcessor
+projectionDefinitionRegistrar
+propertySourcesPlaceholderConfigurer
+refreshTokenCookieProperties
+relProviderPluginRegistry
+repoRequestArgumentResolver
+repositories
+repositoryController
+repositoryEntityController
+repositoryExporterHandlerAdapter
+repositoryInvokerFactory
+repositoryPropertyReferenceController
+repositoryRelProvider
+repositoryRestExceptionHandler
+repositorySchemaController
+repositorySearchController
+requestContextFilter
+requestDataValueProcessor
+requestMappingEndpoint
+requestMappingHandlerAdapter
+requestMappingHandlerMapping
+resourceDescriptionMessageSourceAccessor
+resourceHandlerMapping
+resourceMappings
+resourceMetadataHandlerMethodArgumentResolver
+resourceProcessorInvoker
+restHandlerMapping
+restTemplateBuilder
+rootController
+securityFilterChainRegistration
+securityProperties
+selfLinkProvider
+serverHttpRequestMethodArgumentResolver
+serverProperties
+shutdownEndpoint
+simpleControllerHandlerAdapter
+socialCallbackSpringSecurityProcessingFilter
+sortResolver
+spring.data.rest-org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties
+spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties
+spring.hateoas-org.springframework.boot.autoconfigure.hateoas.HateoasProperties
+spring.http.encoding-org.springframework.boot.autoconfigure.web.HttpEncodingProperties
+spring.http.multipart-org.springframework.boot.autoconfigure.web.MultipartProperties
+spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties
+spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties
+spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties
+spring.jta-org.springframework.boot.autoconfigure.transaction.jta.JtaProperties
+spring.metrics.export-org.springframework.boot.actuate.metrics.export.MetricExportProperties
+spring.mvc-org.springframework.boot.autoconfigure.web.WebMvcProperties
+spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties
+spring.thymeleaf-org.springframework.boot.autoconfigure.thymeleaf.ThymeleafProperties
+spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties
+springBootAuthenticationConfigurerAdapter
+springBootRepositoryRestConfigurer
+springSecurityFilterChain
+springSecurityResolvedAccountFilter
+springSecurityWebAppConfig
+standardJacksonObjectMapperBuilderCustomizer
+stormpathAccessTokenAuthenticationRequestFactory
+stormpathAccessTokenConfig
+stormpathAccessTokenController
+stormpathAccessTokenCookieConfig
+stormpathAccessTokenRequestAuthorizer
+stormpathAccessTokenResultFactory
+stormpathAccountGrantedAuthorityResolver
+stormpathAccountPermissionResolver
+stormpathAccountProviderRequestHandler
+stormpathAccountResolver
+stormpathAccountResolvers
+stormpathAccountStoreModelFactory
+stormpathAccountStoreResolver
+stormpathApplication
+stormpathApplicationResolver
+stormpathAuthenticationEntryPoint
+stormpathAuthenticationFailureHandler
+stormpathAuthenticationManager
+stormpathAuthenticationProvider
+stormpathAuthenticationResultSaver
+stormpathAuthenticationResultSavers
+stormpathAuthenticationSuccessHandler
+stormpathAuthenticationTokenFactory
+stormpathAuthorizationHeaderAccountResolver
+stormpathAuthorizationHeaderAuthenticator
+stormpathBasicAuthenticationScheme
+stormpathBearerAuthenticationScheme
+stormpathCacheManager
+stormpathChangePasswordConfig
+stormpathChangePasswordController
+stormpathClient
+stormpathClientApiKey
+stormpathContentNegotiationResolver
+stormpathControllerView
+stormpathCookieAccountResolver
+stormpathCookieAuthenticationResultSaver
+stormpathCsrfTokenManager
+stormpathCsrfTokenRepository
+stormpathCsrfTokenSigningKey
+stormpathFacebookCallbackController
+stormpathFieldValueResolver
+stormpathFilter
+stormpathFilterChainManager
+stormpathFilterChainResolver
+stormpathForgotPasswordConfig
+stormpathForgotPasswordController
+stormpathGithubCallbackController
+stormpathGoogleCallbackController
+stormpathGrantTypeStatusValidator
+stormpathGroupGrantedAuthorityResolver
+stormpathGroupPermissionResolver
+stormpathHttpAuthenticationSchemes
+stormpathIdSiteOrganizationResolver
+stormpathIdSiteResultController
+stormpathJsonView
+stormpathJsonViewResolver
+stormpathJspViewResolver
+stormpathJwtAccountResolver
+stormpathJwtSigningKeyResolver
+stormpathLayoutInterceptor
+stormpathLinkedinCallbackController
+stormpathLocaleChangeInterceptor
+stormpathLocaleResolver
+stormpathLocalhostResolver
+stormpathLoginConfig
+stormpathLoginController
+stormpathLoginErrorModelFactory
+stormpathLogoutConfig
+stormpathLogoutController
+stormpathLogoutHandler
+stormpathMeController
+stormpathMeExpandsResolver
+stormpathMessageContextRegistrar
+stormpathMessageSource
+stormpathMessageSourceDefinitionPostProcessor
+stormpathMethodSecurityExpressionHandler
+stormpathNonceCache
+stormpathOrganizationNameKeyResolver
+stormpathOriginAccessTokenRequestAuthorizer
+stormpathProducedMediaTypes
+stormpathRefreshTokenAuthenticationRequestFactory
+stormpathRefreshTokenCookieConfig
+stormpathRefreshTokenResultFactory
+stormpathRegisterConfig
+stormpathRegisterController
+stormpathRegisterEnabledPredicate
+stormpathRegisterEnabledResolver
+stormpathRemoteAddrResolver
+stormpathRequestApplicationAttributeNames
+stormpathRequestClientAttributeNames
+stormpathRequestEventListener
+stormpathRequestEventPublisher
+stormpathRevokeTokenConfig
+stormpathRevokeTokenController
+stormpathSamlConfig
+stormpathSecureResolver
+stormpathSecurityConfigurerAdapter
+stormpathSecurityContextPersistenceFilter
+stormpathServerUriResolver
+stormpathServletContextListener
+stormpathSpringLocaleResolver
+stormpathStaticResourceHandlerMapping
+stormpathSubdomainResolver
+stormpathUsernamePasswordRequestFactory
+stormpathVerifyConfig
+stormpathVerifyController
+stormpathWildcardPermissionEvaluator
+stormpathWrappedServletRequestFactory
+stormpathWrapperFilter
+stringHttpMessageConverter
+systemPublicMetrics
+templateEngine
+thymeleafResourceResolver
+thymeleafViewResolver
+tomcatEmbeddedServletContainerFactory
+tomcatPoolDataSourceMetadataProvider
+tomcatPublicMetrics
+traceEndpoint
+traceRepository
+transactionAttributeSource
+transactionInterceptor
+transactionManager
+transactionTemplate
+uriListHttpMessageConverter
+validatingRepositoryEventListener
+validator
+viewControllerHandlerMapping
+viewResolver
+webRequestLoggingFilter
+webSecurityExpressionHandler
+websocketContainerCustomizer
+welcomePageHandlerMapping
+2017-02-07 21:03:09.122  INFO 35401 --- [           main] hello.HelloControllerITest               : Started HelloControllerITest in 10.821 seconds (JVM running for 11.623)
+2017-02-07 21:03:09.280  INFO 35401 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-02-07 21:03:09.280  INFO 35401 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-02-07 21:03:09.302  INFO 35401 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+]]></system-out>
+  </testcase>
 </testsuite>

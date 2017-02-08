@@ -1,43 +1,32 @@
 package hello;
 
+import java.time.LocalDate;
 import java.util.UUID;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import lombok.Data;
 
+@Data
 @Entity
 public class Person {
- 
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
+
 	@Id
-	@GeneratedValue(generator = "UUID")
+	@GeneratedValue(generator="UUID")
 	@GenericGenerator(
-		name = "UUID",
-		strategy = "org.hibernate.id.UUIDGenerator"
+		name="UUID",
+		strategy="org.hibernate.id.UUIDGenerator"
 	)
+	@Column(name="id", updatable=false, nullable=false)
 	private UUID id;
- 
-    private String firstName;
-    private String lastName;
- 
-    public String getFirstName() {
-        return firstName;
-    }
- 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
- 
-    public String getLastName() {
-        return lastName;
-    }
- 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+
+	@Column private String firstName;
+	@Column private String lastName;
+	@Column private String summary;
+	@Column private LocalDate dateOfBirth;
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="hello.HelloControllerTest" time="0.018" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="hello.HelloControllerTest" time="0.056" tests="3" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib"/>
@@ -61,5 +61,127 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="getHello" classname="hello.HelloControllerTest" time="0.018"/>
+  <testcase name="getPerson" classname="hello.HelloControllerTest" time="0.007"/>
+  <testcase name="createPerson" classname="hello.HelloControllerTest" time="0.039">
+    <failure message="Status expected:&lt;201&gt; but was:&lt;401&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<201> but was:<401>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:54)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:81)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers$10.match(StatusResultMatchers.java:664)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
+	at hello.HelloControllerTest.createPerson(HelloControllerTest.java:52)
+]]></failure>
+    <system-out><![CDATA[
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /persons/
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = null
+          Headers = {X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY], WWW-Authenticate=[Bearer realm="My Application"], Content-Type=[application/json]}
+     Content type = application/json
+             Body = {"status":"error.accessDenied","message":"Full authentication is required to access this resource","fieldErrors":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  </testcase>
+  <testcase name="getHello" classname="hello.HelloControllerTest" time="0.01">
+    <failure message="Status expected:&lt;200&gt; but was:&lt;401&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<200> but was:<401>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:54)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:81)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers$10.match(StatusResultMatchers.java:664)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
+	at hello.HelloControllerTest.getHello(HelloControllerTest.java:39)
+]]></failure>
+    <system-out><![CDATA[
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /persons/
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = null
+          Headers = {X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY], WWW-Authenticate=[Bearer realm="My Application"], Content-Type=[application/json]}
+     Content type = application/json
+             Body = {"status":"error.accessDenied","message":"Full authentication is required to access this resource","fieldErrors":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /hello
+       Parameters = {}
+          Headers = {Accept=[application/json;charset=UTF-8]}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = null
+          Headers = {X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY], WWW-Authenticate=[Bearer realm="My Application"], Content-Type=[application/json]}
+     Content type = application/json
+             Body = {"status":"error.accessDenied","message":"Full authentication is required to access this resource","fieldErrors":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  </testcase>
 </testsuite>

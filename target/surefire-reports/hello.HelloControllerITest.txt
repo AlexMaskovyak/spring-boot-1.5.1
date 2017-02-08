@@ -1,4 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: hello.HelloControllerITest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.952 sec - in hello.HelloControllerITest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.217 sec <<< FAILURE! - in hello.HelloControllerITest
+getHello(hello.HelloControllerITest)  Time elapsed: 0.282 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "Greetings from Spring Boot!"
+     but: was "{\"status\":\"error.accessDenied\",\"message\":\"Full authentication is required to access this resource\",\"fieldErrors\":null}"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at hello.HelloControllerITest.getHello(HelloControllerITest.java:38)
+
